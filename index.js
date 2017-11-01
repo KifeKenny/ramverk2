@@ -8,7 +8,7 @@ var app = express();
 const path = require("path");
 // const fs = require("fs");
 
-console.log(process.env.DBWEBB_PORT);
+// console.log(process.env.DBWEBB_PORT);
 
 var port;
 
