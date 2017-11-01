@@ -1,0 +1,33 @@
+{
+  "name": "me-sida",
+  "version": "1.0.0",
+  "description": "min me sida\u001b[D\u001b[D\u001b[D\u001b[\u001b[\u001b[-sida för kursen ramverk2",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ramverk2"
+  },
+  "author": "Kevin Olguin Jönsson",
+  "license": "ISC",
+  "devDependencies": {
+    "clean-css-cli": "^4.1.10",
+    "codecov": "^3.0.0",
+    "coveralls": "^3.0.0",
+    "csslint": "^1.0.5",
+    "eslint": "^4.10.0",
+    "eslint-plugin-react": "^7.4.0",
+    "html-minifier": "^3.5.6",
+    "htmlhint": "^0.9.13",
+    "js-yaml": "^3.10.0",
+    "jscs": "^3.0.7",
+    "jsonlint": "^1.6.2",
+    "mocha": "^4.0.1",
+    "nyc": "^11.2.1",
+    "stylelint": "^8.2.0",
+    "uglify-js": "^3.1.6"
+  }
+}
