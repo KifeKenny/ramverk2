@@ -1,0 +1,6 @@
+FROM node:6
+WORKDIR /app
+COPY package.json /app
+RUN npm install express pug --save
+COPY . .
+CMD node index.js

@@ -1,14 +1,19 @@
 #!/usr/bin/env node
 "use strict";
 
-// Create the app objekt
 var express = require("express");
+
+//get routes
+var home = require('./routes/default/home');
+var about = require('./routes/default/about');
+var report = require('./routes/default/report');
+
+// Create the app objekt
 var app = express();
 
 const path = require("path");
 // const fs = require("fs");
 
-// console.log(process.env.DBWEBB_PORT);
 
 var port;
 
@@ -35,21 +40,26 @@ app.use(express.static(staticFiles));
 
 
 // Add routes
-app.get("/", (req, res) => {
-    res.render("home", {
-        title: "Home"
-    });
+app.use('/', home);
+app.use('/about', about);
+app.use('/report', report);
+
+app.use((req, res, next) => {
+    var err = new Error("Not Found");
+
+    err.status = 404;
+    next(err);
 });
 
-app.get("/about", (req, res) => {
-    res.render("about", {
-        title: "About"
-    });
-});
-
-app.get("/report", (req, res) => {
-    res.render("report", {
-        title: "Report"
+// Note the error handler takes four arguments
+app.use((err, req, res, next) => {
+    if (res.headersSent) {
+        return next(err);
+    }
+    err.status = err.status || 500;
+    res.status(err.status);
+    res.render("error", {
+        error: err
     });
 });
 

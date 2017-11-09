@@ -1,0 +1,28 @@
+version: "3"
+services:
+    node7:
+        build:
+            context: .
+            dockerfile: docker/Dockerfile-node7
+        volumes:
+            - ./:/home/node/app
+        ports:
+            - 8081:1337
+
+    node6:
+        build:
+            context: .
+            dockerfile: docker/Dockerfile-node6
+        volumes:
+            - ./:/home/node/app
+        ports:
+            - 8082:1337
+
+    node-latest:
+        build:
+            context: .
+            dockerfile: docker/Dockerfile-node-latest
+        volumes:
+            - ./:/home/node/app
+        ports:
+            - 8083:1337
