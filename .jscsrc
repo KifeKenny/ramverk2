@@ -1,4 +1,5 @@
 {
+	"excludeFiles": ["coverage/**"],
 	"validateIndentation": 4,
 	"requireCurlyBraces": ["while", "do", "try", "catch", "for"],
 	"disallowKeywords": [ "with" ],
@@ -30,5 +31,5 @@
 
 	"validateLineBreaks": "LF",
 	"requireLineFeedAtFileEnd": true,
-	"disallowTrailingWhitespace": true
+	"disallowTrailingWhitespace": true,
 }

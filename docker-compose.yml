@@ -26,3 +26,30 @@ services:
             - ./:/home/node/app
         ports:
             - 8083:1337
+
+    node_8_alpine:
+        build:
+            context: .
+            dockerfile: docker/test/Dockerfile-node-8-alpine
+        volumes:
+            - ./:/app/
+        ports:
+            - "3000:3003"
+
+    node_7_alpine:
+        build:
+            context: .
+            dockerfile: docker/test/Dockerfile-node-7-alpine
+        volumes:
+            - ./:/app/
+        ports:
+            - "3000:3001"
+
+    node_6_alpine:
+        build:
+            context: .
+            dockerfile: docker/test/Dockerfile-node-6-alpine
+        volumes:
+            - ./:/app/
+        ports:
+            - "3000:3002"
