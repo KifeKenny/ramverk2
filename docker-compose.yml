@@ -34,7 +34,9 @@ services:
         volumes:
             - ./:/app/
         ports:
-            - "3000:3003"
+            - "3003:3005"
+            # - "3005:3003"
+
 
     node_7_alpine:
         build:
@@ -43,7 +45,8 @@ services:
         volumes:
             - ./:/app/
         ports:
-            - "3000:3001"
+            - "3001:3005"
+            # - "3005:3001"
 
     node_6_alpine:
         build:
@@ -52,4 +55,5 @@ services:
         volumes:
             - ./:/app/
         ports:
-            - "3000:3002"
+            - "3002:3005"
+            # - "3005:3002"
