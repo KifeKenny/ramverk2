@@ -12,6 +12,7 @@ git:
 
 before_script:
     - npm install -g npm@4.6.1
+    - npm --version
     - make install
 
 script:
