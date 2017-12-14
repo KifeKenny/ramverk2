@@ -232,8 +232,8 @@ check-tools-js:
 	@$(call CHECK_VERSION, $(UGLIFYJS), | cut -d ' ' -f 2)
 	@$(call CHECK_VERSION, $(MOCHA))
 	@$(call CHECK_VERSION, $(NYC))
-	@#@$(call CHECK_VERSION, $(COVERALLS))
-	@#@$(call CHECK_VERSION, $(CODECOV))
+	@$(call CHECK_VERSION, $(COVERALLS))
+	@$(call CHECK_VERSION, $(CODECOV))
 
 
 
