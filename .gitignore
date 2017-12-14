@@ -3,4 +3,7 @@ node_modules/
 build/
 coverage/
 npm-debug.log
+
+
+# This file creates a bug in Travis
 package-lock.json
