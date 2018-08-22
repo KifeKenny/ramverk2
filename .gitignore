@@ -5,5 +5,5 @@ coverage/
 npm-debug.log
 
 
-# This file creates a bug in Travis
+# travis bug -_-
 package-lock.json

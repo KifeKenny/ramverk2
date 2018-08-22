@@ -30,12 +30,14 @@
     "mocha": "^4.0.1",
     "nyc": "^11.2.1",
     "stylelint": "^8.2.0",
-    "uglify-js": "^3.1.6"
+    "uglify-js": "^3.1.6",
+    "ws": "^3.3.1"
   },
   "dependencies": {
     "express": "^4.16.2",
     "jstransformer-markdown-it": "^2.0.0",
     "postcss-sass": "^0.2.0",
-    "pug": "^2.0.0-rc.4"
+    "pug": "^2.0.0-rc.4",
+    "wscat": "^2.0.1"
   }
 }

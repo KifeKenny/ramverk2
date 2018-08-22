@@ -1,19 +1,22 @@
 #!/usr/bin/env node
 "use strict";
 
-var express = require("express");
+const express = require("express");
+const path = require("path");
+const http = require("http");
+const wChatt = require("./src/chatt/watelChatt");
 
 //get routes
 var home = require('./routes/default/home');
 var about = require('./routes/default/about');
 var report = require('./routes/default/report');
+var chat = require('./routes/default/chat');
 
 // Create the app objekt
-var app = express();
+const app = express();
+const server = http.createServer(app);
 
-const path = require("path");
-// const fs = require("fs");
-
+var wss = new wChatt(server, true, "/chatt");
 
 var port;
 
@@ -43,6 +46,7 @@ app.use(express.static(staticFiles));
 app.use('/', home);
 app.use('/about', about);
 app.use('/report', report);
+app.use('/chat', chat);
 
 app.use((req, res, next) => {
     var err = new Error("Not Found");
@@ -66,4 +70,5 @@ app.use((err, req, res, next) => {
 // Start up server
 console.log("Express is ready.");
 console.log("Listening to port: " + port);
-app.listen(port);
+// app.listen(port);
+server.listen(port);

@@ -1,0 +1,33 @@
+extend layout.pug
+
+block middle
+    div(class="col-sm-8 text-left")
+        h1 Chat
+        hr
+        form#form1
+            p
+                p #[strong Connect to:]
+                input#connect_url.form-control.tt(type='text', value='ws://localhost:1337/chatt')
+                select#protocol
+                    option(value="json") Json
+                br
+                br
+                br
+                p.
+                    #[strong Select Username:]
+                input#nickName.form-control(type='text')
+                input#connect(type='button' value="Connect")
+                input#close.ree(type='button' value="close connection")
+
+            p
+                label Send message:
+                input#message.form-control(type='text')
+                input#send_message.ree(type='button' value="Send message")
+                input#userName(type='hidden')
+            p
+                label Log:
+                div#output.output
+                input#clearLog(type='button' value="Clear log")
+
+block script
+    script(src="/js/client.js")

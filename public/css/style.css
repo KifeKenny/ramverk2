@@ -1,6 +1,11 @@
 body {
     overflow-y: scroll;
+    background-color: #f1f1f1;
 }
+
+/* main {
+    background-color: #f1f1f1;
+} */
 
 #imageMe {
     width: 200px;
@@ -9,8 +14,15 @@ body {
     margin: 10px;
 }
 
+#protocol {
+    padding: 5px;
+    margin-left: 20px;
+}
+
 .col-sm-8 {
-    min-height: 600px;
+    min-height: 800px;
+    background-color: white;
+    padding-bottom: 50px;
 }
 
 .fix {
@@ -45,6 +57,29 @@ body {
     padding-top: 20px;
     background-color: #f1f1f1;
     height: 100%;
+}
+
+input[type=text] {
+    width: 30em;
+}
+
+input[type=button] {
+    margin-right: 15px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+.tt {
+    float: left;
+}
+
+.output {
+    width: 100%;
+    height: 200px;
+    background-color: #fff;
+    border: 1px solid #aaa;
+    overflow: scroll;
+    font-size: smaller;
 }
 
 footer {
