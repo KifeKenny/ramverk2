@@ -57,3 +57,13 @@ services:
         ports:
             - "3002:3005"
             # - "3005:3002"
+
+    mongodb:
+        image: mongo
+        environment:
+            - MONGO_DATA_DIR=/data/db
+        volumes:
+            - C:/data/db:/data/db
+        ports:
+            - 27017:27017
+        command: mongod
